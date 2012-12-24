@@ -1,74 +1,541 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Nodejs in huaban : node.js in huaban.com" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Nodejs in huaban</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/belltoy/nodejs_in_huaban">View on GitHub</a>
-
-          <h1 id="project_title">Nodejs in huaban</h1>
-          <h2 id="project_tagline">node.js in huaban.com</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/belltoy/nodejs_in_huaban/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/belltoy/nodejs_in_huaban/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Nodejs in huaban maintained by <a href="https://github.com/belltoy">belltoy</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>Node.js在花瓣网的应用</title>
     
+    <meta name="description" content="Node.js在花瓣网的应用" />
+    <meta name="author" content="Zola Zhou" />
 
-  </body>
+    <!--<link href="css/font.css" rel="stylesheet" />-->
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="title" class="step" data-x="-5000" data-y="-3500" data-z="-10000" data-scale="3">
+        <!--<span class="sub">简单介绍</span>-->
+        <span class="sub">Node.js</span>
+        <h1 class="g"><span>在花瓣网的应用</span></h1>
+        <p class="footnote">belltoy<br/>2012.12.22</p>
+    </div>
+
+    <div id="intro" class="step big" data-x="-8520" data-y="-4880" data-scale="13">
+        <h3>花瓣网介绍</h3>
+        <!--<img class="reflect" src="img/screenshot_huaban_home.png" style="position: absolute; right: 0; top: 0; height: 355px; width: 500px;" />-->
+        <img class="reflect" src="img/huaban.com.png" style="position: absolute; right: 0; top: 0; height: 355px; width: 500px;" />
+    </div>
+
+    <div class="step" data-x="-11800" data-y="-3200" data-scale="5">
+        <q>兴趣图谱</q>
+    </div>
+
+    <div class="step" data-x="-11800" data-y="-2200" data-scale="5">
+        <q>2011.11.11正式上线</q>
+    </div>
+
+    <div class="step" data-x="-11800" data-y="-1200" data-scale="5">
+        <q>百万用户，千万PV</q>
+    </div>
+
+
+    <!-- let's build it -->
+    <div class="step big" data-x="-100" data-y="1000">
+        <h1 class="g">Let's build it</h1>
+    </div>
+
+    <!-- 选择语言 -->
+    <div class="step slide" data-x="5000" data-y="2000" data-rotate="90" data-scale="1">
+        <h3>选择语言</h3>
+        <dl>
+            <dt>首先，要满足快速开发的需求</dt>
+            <dd>
+                <ul>
+                    <li>团队熟练程度</li>
+                    <li>敏捷性</li>
+                    <li>库支持</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+
+    <!-- Node.js of course... -->
+    <div class="step big" style="width: 1200px;" data-x="1000" data-y="3000" data-z="-2000" data-rotate="245">
+        <h2>N<span class="g">o</span>de<span class="g">.JS</span> <span class="r">of course</span></h2>
+    </div>
+
+    <!-- why not php -->
+    <div id="why-not-php" class="step big" data-x="5000" data-y="1000" data-z="3000" data-rotate="180">
+        <h1 class="g">Why not <span class="php">PHP</span>?</h1>
+    </div>
+
+    <div class="step" data-x="5100" data-y="700" data-z="3000" data-rotate="205">
+        <li>不喜欢这个语言</li>
+    </div>
+
+    <div class="step" data-x="5250" data-y="500" data-z="3000" data-rotate="230">
+        <li>需要调用大量外部服务</li>
+    </div>
+
+    <div class="step" data-x="5480" data-y="400" data-z="3000" data-rotate="255">
+        <li>不适合写长时间运行的任务</li>
+    </div>
+
+    <!-- why node.js -->
+    <div id="why-node-js" class="step slide" data-x="5000" data-y="5000" data-z="-5000" data-scale="2">
+        <h3>Why N<span class="g">o</span>de<span class="g">.JS</span>?</h3>
+        <ul>
+            <li><span class="b">J</span>ava<span class="r">S</span>cript Language</li>
+            <li>V8 engine</li>
+            <li>Non-blocking IO</li>
+            <li>Express/Connect/jade/socket.io</li>
+            <li>我们都是前端工程师</li>
+        </ul>
+    </div>
+
+    <!-- modules -->
+    <div id="express" class="step big" style="width: 1200px;" data-x="2000" data-y="4600" data-z="-5000" data-rotate="90">
+        <h3>Web 框架</h3>
+        <h1><span class="g">Express</span></h1>
+    </div>
+
+    <div class="step big" data-x="1200" data-y="4600" data-z="-5000" data-rotate="180">
+        <ul>
+            <li>小巧灵活</li>
+            <li>工具丰富</li>
+            <li>容易调教</li>
+        </ul>
+    </div>
+
+    <div class="step big" data-x="2700" data-y="6600" data-z="-5000" data-rotate="90">
+        <h1><span class="b">大量中间件</span></h1>
+    </div>
+
+    <div id="jade" class="step big" data-x="2000" data-y="4600" data-z="-10000" data-rotate="180">
+        <h3>模板引擎</h3>
+        <h1><span class="jade">Jade</span></h1>
+    </div>
+
+    <div class="step big" data-x="2000" data-y="4000" data-z="-10000" data-rotate="180" data-rotate-x="30">
+        <h3 class="g">同时支持</h3>
+        <h2>浏览器端渲染<br/>服务器端渲染</h2>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="3200" data-z="-10000" data-rotate="180" data-rotate-x="-30">
+        <h1 class="g">For what perpose ?</h1>
+        <ul>
+            <li>前后统一</li>
+            <li>减少请求</li>
+            <li><span class="r">富客户端</span></li>
+        </ul>
+    </div>
+
+    <div class="step big" data-x="200" data-y="1200" data-z="-5000" data-rotate="360">
+        <h1 class="r">坑</h1>
+    </div>
+
+    <div class="step slide" data-x="200" data-y="1200" data-z="-15000">
+        <h1 class="r">Jade 模板引擎使用 with 语句</h1>
+    </div>
+
+    <div class="step slide" data-x="1400" data-y="1200" data-z="-15000">
+        <pre><code><span class="comment">// with 语句</span>
+<span class="kw">var</span> user = { <span class="key">name</span>: <span class="str">'foo'</span> };
+<span class="r">with</span> (user) {
+    <span class="kw">var</span> name = <span class="str">'bar'</span>;
+}
+console.log(user.name);
+<span class="comment">// output is 'bar'</span>
+        </code></pre>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="1200" data-z="-15000">
+        <h1 class="r">with 语句的问题</h1>
+        <ul>
+            <li>Consused</li>
+            <li>Slow</li>
+            <li>Deprecated</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="3800" data-y="1200" data-z="-15000">
+        <h1 class="g">解决办法</h1>
+        <h4 class="r">不使用 with 语句</h4>
+    </div>
+
+    <div class="step slide" data-x="3800" data-y="1200" data-z="-15000" data-rotate-y="90">
+        <h1>Jade each 语句</h1>
+        <span class="r">生成的代码太长</span>
+    </div>
+
+    <div class="step slide" data-x="4800" data-y="1200" data-z="-15000" data-rotate-y="90">
+        <h1 class="g">解决办法</h1>
+        <span>去掉用不到的</span>
+    </div>
+
+    <!--<div id="mootools" class="step big" data-x="5500" data-y="5600" data-z="-20000" data-rotate="90">-->
+        <!--<h3>Thank you, <span class="friend">old friend</span></h3>-->
+        <!--<h1 class="mootools" alt="mootools">mootools</h1>-->
+    <!--</div>-->
+
+    <!-- huaban app server -->
+    <div id="app" class="step big" data-x="4500" data-y="6600" data-z="-35000">
+        <h1><span class="r">花瓣</span><br /> <span class="g">App Server</span></h1>
+    </div>
+
+    <div class="step big" style="width: 1200px;" data-x="5500" data-y="6600" data-z="-35000">
+        <h1>实现</h1>
+        <h1> = <span class="modules" style="font-size: .7em;">Modules</span> + <span class="r" style="font-size: .7em;">Services</span></h1>
+    </div>
+
+    <div class="step big" style="width: 1200px;" data-x="5500" data-y="7450" data-z="-35000" data-rotate="90">
+        <h1><span class="g">Faster</span> than <span class="r">C</span> ?</h1>
+    </div>
+
+    <div id="story" class="step big" data-x="-2300" data-y="7450" data-z="-35000" data-rotate="90">
+        <h1>A story</h1>
+    </div>
+
+    <div class="step big" data-x="-6300" data-y="7450" data-z="-35000" data-rotate="90">
+        <span>关于</span>
+        <h1><span class="mysql-my">My</span><span class="mysql-sql">SQL</span> 客户端</h1>
+    </div>
+
+    <div class="step big" data-x="-9300" data-y="7450" data-z="-35000" data-rotate="90">
+        <img src="img/a-b.png">
+    </div>
+
+    <div class="step big" data-x="-9600" data-y="7450" data-z="-25000" data-rotate="90">
+        <img src="img/a-b-c.png">
+    </div>
+
+    <div class="step big" data-x="-9900" data-y="7450" data-z="-15000" data-rotate="90">
+        <img src="img/a-b-c-d.png">
+    </div>
+
+    <div class="step big" data-x="-10200" data-y="7450" data-z="-5000" data-rotate="90">
+        <img src="img/bar.png">
+    </div>
+
+    <div class="step big" data-x="-10500" data-y="7450" data-z="5000" data-rotate="90">
+        <h1>mysql<br/>2.0.0-alpha4</h1>
+    </div>
+
+    <div class="step big" data-x="-10200" data-y="7450" data-z="15000" data-rotate="90">
+        <h1><span class="g">性能很好</span><br/><span class="r">小心有</span><span class="r">坑</span></h1>
+    </div>
+
+    <div class="step slide" data-x="-9300" data-y="7450" data-z="-45000" data-rotate="90">
+    <!--<div class="step slide" data-x="-10500" data-y="7800" data-z="5000" data-rotate="160">-->
+        <pre style="font-size: 36px;"><code><span class="comment" style="font-size: 30px;">// node_modules/mysql/lib/protocol/packets/RowDataPacket.js</span>
+<span class="kw">var</span> numberString = parser.<strong class="hl">parseLengthCodedString</strong>();
+<span class="rt">return</span> (numberString === <span class="kw">null</span>
+    || (field.zeroFill && numberString[0] == "0"))
+    ? <strong class="hl">numberString</strong>
+    : Number(numberString);
+            </code>
+        </pre>
+    </div>
+
+    <div id="npm" class="step big" data-x="-25000" data-y="10000" data-z="-12000">
+        <h3>Thank you! </h3>
+        <h1 style="margin-top: 0.4em;">
+            <img src="img/npm.png" alt="npm" />
+        </h1>
+    </div>
+
+    <div class="step" style="width: 1200px;" data-x="-25000" data-y="10000" data-z="3000" data-rotate="180">
+        <ul id="modules">
+            <li class="underscore">Underscore.js</li>
+            <li class="qs">qs</li>
+            <li class="jsdom">jsdom</li>
+            <li class="jade">jade</li>
+            <li class="should">should</li>
+            <li class="async">async</li>
+            <li class="validator">validator</li>
+            <li class="seq">Seq</li>
+            <li class="mocha">mocha</li>
+            <li class="mysql">mysql</li>
+            <li class="mysql-pool">mysql-pool</li>
+            <li class="hiredis">hiredis</li>
+            <li class="memcached">memcached</li>
+            <li class="express">Express</li>
+            <li class="connect">Connect</li>
+            <li class="tunnel">tunnel</li>
+            <li class="should">should</li>
+            <li class="supertest">Supertest</li>
+            <li class="request">request</li>
+        </ul>
+    </div>
+
+     <!-- pic storage -->
+    <div id="storage" class="step slide" data-x="5500" data-y="6000" data-z="-15000">
+        <h3>图片存储服务</h3>
+        <ul>
+            <li>安全、稳定</li>
+            <li>CDN 加速</li>
+            <li>伸缩自如</li>
+            <li>动态缩略图</li>
+        </ul>
+    </div>
+
+    <div id="upyun" class="step big" data-x="7000" data-y="6000" data-z="-35000">
+        <h1>又拍<span class="b">云存储</span></h1>
+    </div>
+
+    <div class="step big" data-x="7000" data-y="8000" data-z="-35000" data-rotate="225">
+        <h1>回调多了<br/>难免有<span class="r">坑</span></h1>
+    </div>
+
+    <div id="callback" class="step slide" style="width: 1200px;" data-x="5000" data-y="2000" data-z="-25000" data-rotate="225">
+        <h3><span class="y">callback function</span></h3>
+        <pre style="font-size: 40px;"><span class="comment">// e.g. </span>
+<code>User.load(user_id, <span class="kw">function</span>(err, user){
+    Profile.load(user_id, <span class="kw">function</span>(err, profile){
+        Pin.loadUserPins(user_id, opts, <span class="kw">function</span>(err, pins){
+            Board.load(pin.board_id, <span class="kw">function</span>(err, board){
+                <strong class="comment">// <span class="r">坑</span>爹啊，后面都看不见了</strong>
+            });
+        });
+    });
+});
+            </code>
+        </pre>
+    </div>
+
+    <div id="seq" class="step big" data-x="36500" data-y="8450" data-z="-35000" data-scale="3">
+        <h1><span class="y">Seq</span></h1>
+    </div>
+
+    <div class="step big" data-x="36500" data-y="9450" data-z="-35000" data-scale="3" data-rotate-x="-90">
+        <pre style="font-size: 30px;"><code><span class="kw">var</span> Seq = require('seq');
+Seq()
+    .seq(<span class="kw">function</span>(){
+        <span class="comment">// do something</span>
+        Pin.loadUserPins(user_id, opts, <span class="kw">this</span>);
+    })
+    .flatten()
+    .parEach(<span class="num">5</span>, <span class="kw">function</span>(pin){
+        <span class="comment">// do something in parallel</span>
+    })
+    .seq(<span class="kw">function</span>(){
+        <span class="comment">// do something</span>
+    })
+    .catch(<span class="kw">function</span>(err){
+        <span class="comment">// catch exception</span>
+    });
+        </code>
+        </pre>
+    </div>
+
+    <div class="step big" data-x="36500" data-y="11450" data-z="-35000" data-rotate-x="-180">
+        <h1>又跳进一个<span class="r">坑</span></h1>
+    </div>
+
+    <div class="step big" data-x="36500" data-y="22450" data-z="-35000">
+        <h1 class="g">大量消耗 CPU</h1>
+    </div>
+
+    <div id="async" class="step big" data-x="38000" data-y="22450" data-z="-35000" data-rotate-y="40">
+        <h1 class="g">async</h1>
+    </div>
+
+    <div class="step slide" data-x="38000" data-y="22450" data-z="-37000" data-rotate-y="80">
+        <h3 class="g">CPU 降了，但是 . . .</h3>
+    </div>
+
+    <div class="step slide" data-x="28000" data-y="14450" data-z="-37000">
+        <pre style="font-size: 40px;"><code><span class="kw">var</span> async = require(<span class="str">'async'</span>);
+async.waterfall([
+    <span class="kw">function</span>(next){
+        <span class="comment">// e.g. load user</span>
+    },
+    <span class="kw">function</span>(user, next){
+        <span class="comment">// load something</span>
+    }
+], function(err, result){
+    <span class="kw">if</span> (err) callback(err);
+    <span class="comment">// return something</span>
+});
+        </code></pre>
+    </div>
+
+    <div class="step big" data-x="28000" data-y="24450" data-z="-8000">
+        <h1>还 有 <span class="r">坑</span></h1>
+    </div>
+
+    <div class="step slide" data-x="28000" data-y="28450" data-z="-37000">
+        <pre style="font-size: 36px;"><code><span class="comment">// async.js</span>
+<span class="kw">var</span> args = Array.prototype.<strong class="hl">slice</strong>.call(arguments, <span class="num">1</span>);
+<span class="kw">var</span> next = iterator.next();
+<span class="kw">if</span> (next) {
+    args.<strong class="hl">push</strong>(wrapIterator(next));
+}
+<span class="kw">else</span> {
+    args.<strong class="hl">push</strong>(callback);
+}
+async.nextTick(<span class="kw">function</span> () {
+    iterator.apply(null, args);
+});
+        </code></pre>
+    </div>
+
+    <div class="step slide" data-x="28000" data-y="30450" data-z="-37000">
+        <pre style="font-size: 40px;"><code><span class="kw">var</span> async = require(<span class="str">'async'</span>);
+async.waterfall([
+    <span class="kw">function</span>(next){
+        <span class="comment">// e.g. load user</span>
+    },
+    <span class="kw">function</span>(<strong class="hl">user</strong>, <strong class="hl">next</strong>){
+        <span class="comment">// 小心！别踩到</span><span class="r">坑</span><span class="comment">里了</span>
+        <span class="comment">// user may become next callback</span>
+        <span class="comment">// next may be undefined</span>
+    }
+], function(err, result){
+    <span class="comment">// return something</span>
+});
+        </code></pre>
+    </div>
+
+    <div class="step slide" data-x="28000" data-y="32050" data-z="-37000">
+        <h3>强制规范你的代码</h3>
+        <pre style="font-size: 40px;"><code><span class="kw">function</span> doSomething(arg, callback) {
+    <span class="comment">// do something</span>
+    <span class="kw">if</span> (err) <span class="rt">return</span> callback(err);
+    <span class="kw">if</span> (some_test) {
+        callback(<strong class="kw">null</strong>, <strong class="kw">null</strong>);
+    } <span class="kw">else</span> {
+        callback(<strong class="kw">null</strong>, result);
+    }
+}
+        </code></pre>
+    </div>
+
+    <div id="testing" class="step big" data-x="28000" data-y="32050" data-z="-30000">
+        <h1>测试框架</h1>
+        <ul>
+            <li>Mocha</li>
+            <li>PhantomJS</li>
+            <li>Zombie</li>
+        </ul>
+    </div>
+
+    <!-- tasks -->
+    <div id="tasks" class="step slide" data-x="28500" data-y="35000" data-z="-25000" data-rotate="90">
+        <h3 class="g">耗时操作</h3>
+        <ul>
+            <li>Timeline pushing</li>
+            <li><span class="y">Solr</span> indexing</li>
+            <li>Batch operation: delete board</li>
+            <li><span class="r">Weibo</span> sharing</li>
+        </ul>
+    </div>
+
+    <div class="step big bg" data-x="29500" data-y="35000" data-z="-25000" data-rotate="90">
+        <h1 class="g">必须从请求中脱离出来</h1>
+    </div>
+
+    <div class="step big bg" data-x="30500" data-y="35000" data-z="-25000" data-rotate="90">
+        <h1 class="g">要有任务系统</h1>
+    </div>
+
+    <div class="step big" data-x="32450" data-y="38000" data-z="-15000" data-rotate="180">
+        <h2 class="g">什么样的任务系统</h2>
+    </div>
+
+    <div class="step big" data-x="32750" data-y="38600" data-z="-15000" data-rotate="90">
+        <h4 class="g">它需要满足：</h4>
+    </div>
+
+    <div class="step" style="width: 700px;" data-x="32600" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>基于事件/消息</li>
+    </div>
+    <div class="step" style="width: 700px;" data-x="32500" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>工作进程管理</li>
+    </div>
+    <div class="step" style="width: 700px;" data-x="32400" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>容错性</li>
+    </div>
+    <div class="step" style="width: 700px;" data-x="32300" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>消息可持久化</li>
+    </div>
+    <div class="step" style="width: 700px;" data-x="32200" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>Cast / Call</li>
+    </div>
+    <div class="step" style="width: 700px;" data-x="32100" data-y="38600" data-z="-15000" data-rotate="90">
+        <li>分布式的</li>
+    </div>
+
+    <div id="petaline" class="step" data-x="34500" data-y="30500" data-z="-10000" data-rotate="90">
+        <img src="img/petaline_arch.png" style="float: left;" />
+        <div style="width: 600px;float: right;">
+            <ul class="small">
+                <li><span class="b">Erlang/OTP</span></li>
+                <li><span class="y">Riak Core</span></li>
+                <li>N<span class="g">o</span>de<span class="g">.JS</span> worker</li>
+                <li><span class="r">leveldb</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="arch" class="step center" data-x="34500" data-y="31500" data-z="-10000" data-rotate="90" data-rotate-x="-50">
+        <img src="img/arch_overview.png" />
+    </div>
+
+    <div id="todo" class="step slide" data-x="34500" data-y="32500" data-z="-10000">
+        <h4 class="g">More things TODO:</h4>
+        <ul>
+            <li><span class="redis">Redis</span> cluster</li>
+            <li>Express Session 改进</li>
+            <li><span class="petal">Petaline</span> 更多语言、协议支持</li>
+            <li>完善测试</li>
+            <li>real-time support</li>
+        </ul>
+    </div>
+
+    <div class="step big" style="width: 1200px;" data-x="34500" data-y="33500" data-z="-10000">
+        <h3 style="text-align: center;"><span class="b">J</span>ava<span class="r">S</span>cript 强大，但是也有糟粕</h3>
+    </div>
+
+    <div class="step big" style="width: 1200px;" data-x="34500" data-y="34500" data-z="-10000">
+        <!--<h1>Join us<br/><span class="g">hr</span>@<span class="r">huaban</span>.com</h1>-->
+        <h3 style="text-align: center;">N<span class="g">o</span>de<span class="g">.JS</span> 好玩，偶尔也挺<span class="r">坑</span>爹</h3>
+    </div>
+
+    <div id="jobs" class="step big" style="width: 1200px;" data-x="34500" data-y="35500" data-z="-10000">
+        <h3 style="text-align: center;">Join us! 让我们一起来踩<span class="r">坑</span>吧！</h3>
+        <h1 style="text-align: center;"><span class="g">hr</span>@<span class="r">huaban</span>.com</h1>
+    </div>
+
+    <div id="thanks" class="step big center" data-x="37000" data-y="30500" data-z="-30000" data-rotate="380" data-scale="4">
+        <h1>谢谢观看</h1>
+        <img src="img/logo.png" />
+    </div>
+
+    <div id="powerd-by" class="step big" data-x="30000" data-y="53500" data-z="50000">
+        <h1>Powered by<br/><span class="g">impress.js</span></h1>
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
 </html>
